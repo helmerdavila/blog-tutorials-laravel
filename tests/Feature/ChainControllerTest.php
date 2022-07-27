@@ -10,7 +10,7 @@ class ChainControllerTest extends TestCase
 {
     public function test_using_facades()
     {
-        Storage::fake('photos');
+        Storage::fake('local');
 
         Storage::shouldReceive('disk')->once()->with('local')->andReturnSelf();
         Storage::shouldReceive('put')->once()->withSomeOfArgs('/images/content');
